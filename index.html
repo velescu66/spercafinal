@@ -637,5 +637,21 @@ function renderAllViews(){ initTimes(); renderBoardColumns(); renderCabList(); r
 })();
 
 </script>
+  <iframe 
+  id="progFrame"
+  src="https://velescu66.github.io/spercafinal/" 
+  style="width:100%; border:none;" 
+  scrolling="no">
+</iframe>
+
+<script>
+// ascultă mesajele de la pagina din iframe
+window.addEventListener("message", function(event) {
+  if (event.data.type === "resize-iframe") {
+    document.getElementById("progFrame").style.height = event.data.height + "px";
+  }
+});
+</script>
+
 </body>
 </html>
